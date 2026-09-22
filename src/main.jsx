@@ -39,7 +39,7 @@ function Landing({onEnter}){
    <section className="hero">
     <div className="market-art real-market-art">
       <img src="https://images.stockcake.com/public/7/2/6/726405d2-e46f-4e7c-a614-7f5d81fd89d7_large/bulls-bears-trading-stockcake.jpg" alt="Bull and bear market with real candlestick trading charts"/>
-      <div className="market-overlay"/>
+      <div className="market-overlay"/><div className="candle-splash" aria-hidden="true"><i/><i/><i/><i/><i/><i/><i/><i/><i/><i/><i/><i/></div>
     </div>
     <div className="eyebrow">CUSTOM FOREX ENGINE • MULTI-USER MT5</div>
     <h1>WELCOME TO<br/><em>THE FOREX LIFE</em></h1>
