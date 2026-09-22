@@ -10,9 +10,9 @@ function Landing({onEnter}){
  return <main className="landing">
    <div className="ambient a"/><div className="ambient b"/>
    <section className="hero">
-    <div className="market-art" aria-hidden="true">
-      <div className="chart"><span/><span/><span/><span/><span/><span/><span/></div>
-      <div className="trend">↗</div><div className="coin">₿</div>
+    <div className="market-art real-market-art">
+      <img src="https://images.stockcake.com/public/7/2/6/726405d2-e46f-4e7c-a614-7f5d81fd89d7_large/bulls-bears-trading-stockcake.jpg" alt="Bull and bear market with real candlestick trading charts"/>
+      <div className="market-overlay"/>
     </div>
     <div className="eyebrow">🧠 CUSTOM FOREX ENGINE • MT5 AUTO TRADING</div>
     <h1>WELCOME TO<br/><em>THE FOREX LIFE</em></h1>
