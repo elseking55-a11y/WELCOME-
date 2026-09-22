@@ -29,7 +29,7 @@ function Landing({onEnter}){
      const data=await api(mode==="login"?"/api/auth/login":"/api/auth/register",{email,password,accessKey:key});
      onEnter({email:data.user?.email||email,token:data.token||""});
    }catch(e){
-     if(!API){onEnter({email,token:""});return;}
+     if(!API){setError("Backend API is not configured yet. Connect the secure backend before users can sign in.");return;}
      setError(e.message);
    }finally{setBusy(false);}
  };
@@ -86,7 +86,7 @@ function Dashboard({user}){
  const saveSettings=async()=>{
    setSaved(false);
    try{await api("/api/settings",{...settings,autoTrade:auto});setSaved(true);}
-   catch(e){if(!API){setSaved(true);return;}setMt5Error(e.message);}
+   catch(e){setMt5Error(e.message||"Could not save settings.");}
  };
 
  return <main className="dash">
