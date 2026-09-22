@@ -14,17 +14,17 @@ function Landing({onEnter}){
       <img src="https://images.stockcake.com/public/7/2/6/726405d2-e46f-4e7c-a614-7f5d81fd89d7_large/bulls-bears-trading-stockcake.jpg" alt="Bull and bear market with real candlestick trading charts"/>
       <div className="market-overlay"/>
     </div>
-    <div className="eyebrow">🧠 CUSTOM FOREX ENGINE • MT5 AUTO TRADING</div>
+    <div className="eyebrow">CUSTOM FOREX ENGINE • MT5 AUTO TRADING</div>
     <h1>WELCOME TO<br/><em>THE FOREX LIFE</em></h1>
     <div className="motto">NO EASY MONEY HERE.</div>
     <p className="lead">Read the market. Wait for confirmation. Execute with discipline.</p>
     <div className="access">
-      <div className="access-title">🔑 PRIVATE ACCESS KEY</div>
+      <div className="access-title">PRIVATE ACCESS KEY</div>
       <input value={key} onChange={e=>setKey(e.target.value)} onKeyDown={e=>e.key==="Enter"&&enter()} type="password" placeholder="Enter your key"/>
       <button onClick={enter}>ENTER THE FOREX LIFE <b>→</b></button>
       {error&&<small className="error">{error}</small>}
     </div>
-    <div className="pill-row"><span>📊 SELECTIVE SIGNALS</span><span>🛡️ RISK CONTROL</span><span>⚡ MT5 EXECUTION</span></div>
+    <div className="pill-row"><span>SELECTIVE SIGNALS</span><span>RISK CONTROL</span><span>MT5 EXECUTION</span></div>
     <p className="risk-note">Trading involves risk. Auto Trade will remain OFF until explicitly enabled.</p>
    </section>
  </main>
@@ -33,15 +33,15 @@ function Landing({onEnter}){
 function Dashboard(){
  const [auto,setAuto]=useState(false);
  return <main className="dash">
-  <header><div className="logo">FOREX <i>LIFE</i></div><div className="connection"><span/> MT5 READY</div><button className={"auto "+(auto?"on":"")} onClick={()=>setAuto(!auto)}>AUTO TRADE {auto?"ON 🟢":"OFF"}</button></header>
+  <header><div className="logo">FOREX <i>LIFE</i></div><div className="connection"><span/> MT5 NOT CONNECTED</div><button className={"auto "+(auto?"on":"")} onClick={()=>setAuto(!auto)}>AUTO TRADE {auto?"ON 🟢":"OFF"}</button></header>
   <section className="content">
-   <div className="top"><div><div className="eyebrow">CUSTOM ENGINE</div><h2>Trading Dashboard</h2><p>The engine can return <b>BUY</b>, <b>SELL</b> or <b>WAIT</b>. No forced entries.</p></div><button className="lock" onClick={()=>location.reload()}>🔒 LOCK</button></div>
-   <div className="stats"><Stat label="Account" value="MT5 •••• 4821"/><Stat label="Balance" value="$0.00"/><Stat label="Equity" value="$0.00"/><Stat label="Open positions" value="0"/></div>
+   <div className="top"><div><div className="eyebrow">CUSTOM ENGINE</div><h2>Trading Dashboard</h2><p>The engine can return <b>BUY</b>, <b>SELL</b> or <b>NO ENTRY</b>. No forced entries.</p></div><button className="lock" onClick={()=>location.reload()}>LOCK</button></div>
+   <div className="stats"><Stat label="Account" value="NOT CONNECTED"/><Stat label="Balance" value="—"/><Stat label="Equity" value="—"/><Stat label="Open positions" value="—"/></div>
    <div className="grid">
-    <article className="panel"><h3>🧠 Analysis Engine</h3><div className="signal-box" aria-label="Trading signal"><div className="signal-option buy"><span>↑</span><strong>BUY</strong><small>Qualified Setup</small></div><div className="signal-option sell"><span>↓</span><strong>SELL</strong><small>Qualified Setup</small></div><div className="signal-option wait active"><span>Ⅱ</span><strong>NO ENTRY</strong><small>Wait for confirmation</small></div></div><div className="row"><span>Trend</span><b>Waiting for live market</b></div><div className="row"><span>RSI 14</span><b>—</b></div><div className="row"><span>ATR 14</span><b>—</b></div><div className="row"><span>Spread</span><b>—</b></div><div className="row"><span>Decision</span><b>NO FORCED ENTRY</b></div></article>
-    <article className="panel"><h3>⚙️ Auto Trade Settings</h3><div className="row"><span>Risk / trade</span><b>1%</b></div><div className="row"><span>Maximum positions</span><b>5</b></div><div className="row"><span>Stop Loss</span><b className="good">ON</b></div><div className="row"><span>Take Profit</span><b className="good">ON</b></div><div className="row"><span>Trailing Stop</span><b className="good">ON</b></div><div className="row"><span>Daily loss limit</span><b>5%</b></div></article>
+    <article className="panel"><h3>Analysis Engine</h3><div className="signal-box" aria-label="Trading signal"><div className="signal-option buy"><span>↑</span><strong>BUY</strong><small>Qualified Setup</small></div><div className="signal-option sell"><span>↓</span><strong>SELL</strong><small>Qualified Setup</small></div><div className="signal-option wait active"><span>Ⅱ</span><strong>NO ENTRY</strong><small>Wait for confirmation</small></div></div><div className="row"><span>Trend</span><b>Waiting for live market</b></div><div className="row"><span>RSI 14</span><b>—</b></div><div className="row"><span>ATR 14</span><b>—</b></div><div className="row"><span>Spread</span><b>—</b></div><div className="row"><span>Decision</span><b>NO FORCED ENTRY</b></div></article>
+    <article className="panel"><h3>Auto Trade Settings</h3><div className="row"><span>Risk / trade</span><b>1%</b></div><div className="row"><span>Maximum positions</span><b>5</b></div><div className="row"><span>Stop Loss</span><b className="good">ON</b></div><div className="row"><span>Take Profit</span><b className="good">ON</b></div><div className="row"><span>Trailing Stop</span><b className="good">ON</b></div><div className="row"><span>Daily loss limit</span><b>5%</b></div></article>
    </div>
-   <article className="panel positions"><h3>📈 Open Positions</h3><div className="empty">No live positions connected.</div></article>
+   <article className="panel positions"><h3>Open Positions</h3><div className="empty">No live positions connected.</div></article>
   </section>
  </main>
 }
